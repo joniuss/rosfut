@@ -3,9 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>Tema de Fútbol en Línea</title>
+  <meta http-equiv="refresh" content="200" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="expires" content="-1" />
   <script type="text/javascript" src="https://cssstyles.pages.dev/smallscripts.js" async></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" defer></script>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 
@@ -246,11 +251,11 @@
 </head>
 <body onload="guardaHorario(); dT();">
   <div class="container">
-
+<br>
     <div class="menuavi" id="mymenuavi">
       <a href="javascript:location.reload()"  id="olilao" class="active">Inicio</a>
       <a href="privacidad.html" >Privacidad</a>
-      <a href="dmc.html" >DMC</a>
+     
   </div>
   <br>
     <div class="match">
@@ -669,7 +674,16 @@
 
   </div>
 
-
+  <script>
+    function myFunction() {
+      var x = document.getElementById("mymenuavi");
+      if (x.className === "menuavi") {
+        x.className += " responsive";
+      } else {
+        x.className = "menuavi";
+      }
+    }
+  </script>
   <script>
     var bomom = 0;
     var dongoo = document.getElementById("olilao");
