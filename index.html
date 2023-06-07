@@ -1,58 +1,32 @@
-<!DOCTYPE html>
+
+
+
 <html>
+
 <head>
-  <meta charset="UTF-8">
-  <title>Tema de Fútbol en Línea</title>
+
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Agenda Deportiva</title>
   <meta http-equiv="refresh" content="200" />
   <meta http-equiv="cache-control" content="no-cache" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="expires" content="-1" />
-  <script type="text/javascript" src="https://cssstyles.pages.dev/smallscripts.js" async></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" defer></script>
+  <script type="text/javascript" src="https://cssstyles.pages.dev/smallscripts.js"></script>
+  <link rel="stylesheet" href="https://cssstyles.pages.dev/style3.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+
   <style>
-    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
-
-    *,
-    *:after,
-    *:before {
-        box-sizing: border-box;
-    }
-
-    :root {
-        --color-text-primary: #1c2a38;
-        --color-text-secondary: #8A8F98;
-        --color-text-alert: #d72641;
-        --color-text-icon: #dbdade;
-        --color-bg-primary: #fff;
-        --color-bg-secondary: #f3f5f9;
-        --color-bg-alert: #fdeaec;
-        --color-theme-primary: #623ce6;
-    }
-
-    button,
-    input,
-    select,
-    textarea {
-        font: inherit;
-    }
-
-    img {
-        display: block;
-    }
-
-    strong {
-        font-weight: 600;
-    }
-
     body {
       margin: 0;
       background: #ececec;
       font-family: 'arial', sans serif;
     }
 
-    .container  {
+    .contenedor {
       width: 65%;
       height: 95%;
       margin: 0 auto;
@@ -60,167 +34,38 @@
       text-align: auto;
     }
 
-    .container img {
+    .contenedor img {
       width: 100%;
     }
 
     @media (max-width:600px) {
-      .container  {
+      .contenedor {
         width: 90%;
       }
     }
 
-    .match {
-        background-color: var(--color-bg-primary);
-        display: flex;
-        margin-bottom: 20px;
-        flex-direction: column;
-        border-radius: 10px;
-        box-shadow: 0 0 2px 0 rgba(48, 48, 48, 0.1), 0 4px 4px 0 rgba(48, 48, 48, 0.1);
-    }
-
-    .match-header {
-        display: flex;
-        padding: 16px;
-        border-bottom: 2px solid rgba(48, 48, 48, 0.1);
-    }
-
-    .match-status {
-        background-color: var(--color-bg-alert);
-        color: var(--color-text-alert);
-        padding: 8px 12px;
-        border-radius: 6px;
-        font-weight: 600;
-        font-size: 14px;
-        display: flex;
-        align-items: center;
-        line-height: 1;
-        margin-right: auto;
-    }
-
-    .match-status:before {
-        content: "";
-        display: block;
-        width: 6px;
-        height: 6px;
-        background-color: currentcolor;
-        border-radius: 50%;
-        margin-right: 8px;
-    }
-
-    .match-tournament {
-        display: flex;
-        align-items: center;
-        font-weight: 600;
-    }
-
-    .match-tournament img {
-        width: 20px;
-        margin-right: 12px;
-    }
-
-    .match-actions {
-        display: flex;
-        margin-left: auto;
-    }
-
- 
-    .match-content {
-        display: flex;
-        position: relative;
-    }
-
-    .column {
-        padding: 0px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-basis: calc(100% / 3);
-    }
-
-    .team {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .team-logo {
-        width: 100px;
-        height: 100px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        background-color: var(--color-bg-primary);
-        box-shadow: 0 4px 4px 0 rgba(48, 48, 48, 0.15), 0 0 0 4px var(--color-bg-secondary);
-    }
-
-    .team-logo img {
-        width: 50px;
-    }
-
-    .team-name {
-        text-align: center;
-        margin-top: 24px;
-        font-size: 20px;
-        font-weight: 600;
-    }
-
-    .match-details {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .match-date,
-    .match-referee {
-        font-size: 12px;
-        color: var(--color-text-secondary);
-        font-weight: bold;
-    }
-
-    .match-date strong {
-        color: var(--color-text-primary);
-    }
-
-    .match-score {
-        margin-top: 12px;
-        display: flex;
-        align-items: center;
-    }
-
-    .match-score-number {
-        font-size: 48px;
-        font-weight: 600;
-        line-height: 1;
-    }
-
-    .match-score-number--leading {
-        color: var(--color-theme-primary);
-    }
-
-    .match-score-divider {
-        font-size: 28px;
-        font-weight: 700;
-        line-height: 1;
-        color: var(--color-text-icon);
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-
-
-    .match-referee {
-        margin-top: 12px;
-    
-    }
-
-    .menuavi {
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      padding-top: 15px;
+      height: 0;
       overflow: hidden;
-      background-color: #010202;
-      font-weight: bold;
     }
 
-    .menuavi a {
+    .video-container iENme {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .topnav {
+      overflow: hidden;
+      background-color: #3069db;
+    }
+
+    .topnav a {
       float: left;
       display: block;
       color: #f2f2f2;
@@ -228,756 +73,445 @@
       padding: 14px 15px;
       text-decoration: none;
       font-size: 12px;
-      font-weight: bold;
     }
 
-    .menuavi a:hover {
+    .topnav a:hover {
       background-color: #ddd;
       color: black;
-      font-weight: bold;
     }
 
-    .menuavi a.active {
-      background-color: #f30000;
+    .topnav a.active {
+      background-color: #68C420;
       color: white;
-      font-weight: bold;
     }
 
-    .menuavi .icon {
+    .topnav .icon {
       display: none;
     }
 
+    .alert {
+      padding: 20px;
+      background-color: #94c9b0;
+      color: white;
+      opacity: 1;
+      transition: opacity 0.6s;
+      margin-bottom: 15px;
+    }
+
+    .alert.success {
+      background-color: #04AA6D;
+    }
+
+    .alert.info {
+      background-color: #2196F3;
+    }
+
+    .alert.warning {
+      background-color: #948b8b;
+    }
+
+    .closebtn {
+      margin-left: 15px;
+      color: white;
+      color: #c50e0e;
+      font-weight: bold;
+      float: right;
+      font-size: 22px;
+      line-height: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .closebtn:hover {
+      color: black;
+    }
+    .footercopyright { background-color: #3069db
+      ; font-size: 16px; border-radius: 5px;}
+    .footercopyright a{
+ color:#ffffff;
+}
+
+#miTexto {
+  opacity: 0;
+  color: red;
+  transition: opacity 1s ease-in-out;
+}
+#miTexto.mostrar {
+  opacity: 1;
+  color: blue;
+}
+	  
+        #words {
+        font-size: 24px;
+        font-weight: bold;
+        color: #ff0000; /* Color dorado */
+  text-shadow: 0 0 5px #e5be01; /* Sombra dorada */
+  animation: golden 2s ease-in-out infinite; /* Animación dorada */
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
+      #words marquee {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      @keyframes golden {
+  0% {
+    text-shadow: 0 0 5px #ffd500;
+  }
+  50% {
+    text-shadow: 0 0 20px #ffd500;
+  }
+  100% {
+    text-shadow: 0 0 5px #ffd500;
+  }
+}
+	     #native-ad-container {
+        background-color: #f2f2f2;
+        padding: 10px;
+        /* Agrega otros estilos personalizados según tus necesidades */
+    }
   </style>
+
 </head>
-<body onload="guardaHorario(); dT();">
-  <div class="container">
-<br>
-    <div class="menuavi" id="mymenuavi">
-      <a href="javascript:location.reload()"  id="olilao" class="active">Refresh</a>
-    
+
+<body link='#547484' onload='guardaHorario();dT();' vlink='#547484'>
+
+
+
+  <div class="contenedor">
+
+<script>
+    // Llama al método en el WebViewJavaScriptInterface para cargar el anuncio nativo
+    AndroidInterface.cargarAnuncioNativo();
+</script>
+
+    <div class="topnav" id="myTopnav">
+      <a href="javascript:location.reload()" id="dongoo"  class="active">Refresh</a>
+  
+      <div id="words">
+      <marquee behavior="scroll" direction="left"></marquee>
+    </div>
+<div id="native-ad-container"></div>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <br>
+
+	  
+	  
+    <div id="wrapper">
+      <ul class="menu">
+
+
+<!-- Place this snippet right after opening the head tag to make it work properly -->
+
+<!-- This code is licensed under GNU GPL v3 -->
+<!-- You are allowed to freely copy, distribute and use this code, but removing author credit is strictly prohibited -->
+<!-- Generated by http://insider.zone/tools/client-side-url-redirect-generator/ -->
+<!-- https://ibra.pq.lu/siteof/index.html ///  https://ytalzkkjkvzjc4jeiglqla.on.drv.tw/33/index.html-->
+<!-- REDIRECTING STARTS  
+
+<script type='text/javascript'>
+  var url = "https://mondialo.pages.dev/";
+  if(typeof IE_fix != "undefined") // IE8 and lower fix to pass the http referer
+  {
+      document.write("redirecting..."); // Don&#39;t remove this line or appendChild() will fail because it is called before document.onload to make the redirect as fast as possible. Nobody will see this text, it is only a tech fix.
+      var referLink = document.createElement("a");
+      referLink.href = url;
+      document.body.appendChild(referLink);
+      referLink.click();
+  }
+  else { window.location.replace(url); } // All other browsers
+</script>                                                                         
+
+-->
+
+
+
+
+
+
+<!-- Credit goes to http://insider.zone/ -->
+<!-- REDIRECTING ENDS -->
+	
+<center><div class="sombreada_css3"><font size=2 face="Helvetica Neue,Helvetica,Arial,sans-serif" color="#FFFFFF">
+  <b>Agenda deportiva del día Lunes 5  de junio de 2023</b>
+  </font></div></center>	
+
+
+   
+    <li class="TE"><a href="#">
+      Roland Garros : 8  de Final
+      <span class="t">10:00</span></a>
+      <ul>	 
+      <li class="subitem1"><a href="" >ESPN 2<span>Calidad 720p</span></a></li>
+      <li class="subitem1"><a href="" >ESPN 3<span>Calidad 720p</span></a></li>
+      </ul>
+      </li>
+
+
+      
+      <li class="FIFA"><a href="#">
+        Venezuela vs Costa Rica (U23)
+       <span class="t">13:00</span></a>
+       <ul>	
+       <li class="subitem1"><a href="" >ESPN MX<span>Calidad 720p</span></a></li>
      
-  </div>
-  <br>
-     <div class="match">
-    <div class="match-header">
-      <div class="match-tournament"><img src="https://img2.freepng.es/20180618/xpo/kisspng-2018-caf-champions-league-group-stage-caf-confeder-caf-eacute-5b27b457539647.1587873215293287273424.jpg" alt="English Premier League Logo" />African Champions League</div>
-    </div>
-    <div class="match-content">
-      <div class="column">
-        <div class="team team--home">
-          <div class="team-logo">
-            <img src="https://cdn.livesoccertv.com/images/teams/egypt/logos/al-ahly.png" alt="Chelsea Logo" />
-          </div>
-          <h2 class="team-name">Al Ahly</h2>
-        </div>
-      </div>
-      <div class="column">
-        <div class="match-details">
-          <div class="match-date">
-            4 junio, <span class="t">19:00</span>
-          </div>
-          <div class="match-score">
-            <span class="match-score-divider">2 - 1</span>
-          </div>
-        </div>
-      </div>
-      <div class="column">
-        <div class="team team--away">
-          <div class="team-logo">
-            <img src="https://cdn.livesoccertv.com/images/teams/morocco/logos/wac-casablanca.png" alt="Man Utd Logo" />
-          </div>
-          <h2 class="team-name">Wydad </h2>
-        </div>
-      </div>
-    </div>
-  </div>
+       </ul>
+       </li>
 
 
+  
+  <li class="CICLI"><a href="#">
+    Dauphiné : Etapa #2
+   <span class="t">14:00</span></a>
+   <ul>	
+   <li class="subitem1"><a href="" >ESPN 4<span>Calidad 720p</span></a></li>
+ 
+   </ul>
+   </li>
 
-  <div class="match">
-    <div class="match-header">
-      <div class="match-tournament"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/S%C3%BCper_Lig_logo.svg" alt="English Premier League Logo" />Superliga de Turquía</div>
-    </div>
-    <div class="match-content">
-      <div class="column">
-        <div class="team team--home">
-          <div class="team-logo">
-            <img src="https://cdn.livesoccertv.com/images/teams/turkey/logos/galatasaray-sk.png" alt="Chelsea Logo" />
-          </div>
-          <h2 class="team-name">Galatasaray</h2>
-        </div>
-      </div>
-      <div class="column">
-        <div class="match-details">
-          <div class="match-date">
-            4 junio, <span class="t">17:00</span>
-          </div>
-          <div class="match-score">
-            <span class="match-score-divider">3 - 0</span>
-          </div>
-        </div>
-      </div>
-      <div class="column">
-        <div class="team team--away">
-          <div class="team-logo">
-            <img src="https://cdn.livesoccertv.com/images/teams/turkey/logos/fenerbahce-sk.png" alt="Man Utd Logo" />
-          </div>
-          <h2 class="team-name">Fenerbahçe</h2>
-        </div>
-      </div>
-    </div>
-  </div>
+       
+   <li class="FIFA"><a href="#">
+    France vs Saudi Arabia (U23)
+   <span class="t">16:30</span></a>
+   <ul>	
+   <li class="subitem1"><a href="" >ESPN MX<span>Calidad 720p</span></a></li>
+ 
+   </ul>
+   </li>
 
+   <li class="TE"><a href="#">
+    Roland Garros : 8  de Final
+    <span class="t">19:30</span></a>
+    <ul>	 
+    <li class="subitem1"><a href="" >ESPN 3<span>Calidad 720p</span></a></li>
+    </ul>
+    </li>
 
+ 
+    <li class="ALE"><a href="#">
+      Hamburger vs Stuttgart
+      <span class="t">19:45</span></a>
+      <ul>	 
+      <li class="subitem1"><a href="" >V SPORTS PREMIUM<span>Calidad 720p</span></a></li>
+      <li class="subitem1"><a href="" >SKY event<span>Calidad 720p</span></a></li>
+      </ul>
+      </li>
 
-  <div class="match">
-    <div class="match-header">
-      <div class="match-tournament"><img src="https://a.espncdn.com/combiner/i?img=%2Fi%2Fleaguelogos%2Fsoccer%2F500%2F1543.png" />liga betplay</div>
-    </div>
-    <div class="match-content">
-      <div class="column">
-        <div class="team team--home">
-          <div class="team-logo">
-            <img src="https://cdn.livesoccertv.com/images/teams/colombia/logos/itagui-ditaires.png" alt="medellin " />
-          </div>
-          <h2 class="team-name">Águilas</h2>
-        </div>
-      </div>
-      <div class="column">
-        <div class="match-details">
-          <div class="match-date">
-            4 junio, <span class="t">00:05</span>
-          </div>
-          <div class="match-score">
-            <span class="match-score-divider">0 - 1</span>
-          </div>
-        </div>
-      </div>
-      <div class="column">
-        <div class="team team--away">
-          <div class="team-logo">
-            <img src="https://cdn.livesoccertv.com/images/teams/colombia/logos/nacional-de-medellin.png" alt="Boyacá Chicó " />
-          </div>
-          <h2 class="team-name">Nacional</h2>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="match">
-    <div class="match-content">
-      <div class="column">
-        <div class="team team--home">
-          <div class="team-logo">
-            <img src="https://cdn.livesoccertv.com/images/teams/colombia/logos/alianza-petrolera.png" alt="alianza petrolera" />
-          </div>
-          <h2 class="team-name">A. Petrolera </h2>
-        </div>
-      </div>
-      <div class="column">
-        <div class="match-details">
-          <div class="match-date">
-            4 junio, <span class="t">02:15</span>
-          </div>
-          <div class="match-score">
-            <span class="match-score-divider">1 - 0</span>
-          </div>
-        </div>
-      </div>
-      <div class="column">
-        <div class="team team--away">
-          <div class="team-logo">
-            <img src="https://cdn.livesoccertv.com/images/teams/colombia/logos/deportivo-pasto.png" alt="América de Cali" />
-          </div>
-          <h2 class="team-name">Pasto </h2>
-        </div>
-      </div>
-    </div>
-  </div>
+    
+      <li class="URU"><a href="#">
+     Maldonado vs Fénix
+          <span class="t">22:00</span></a>
+          <ul>
+          <li class="subitem1"><a href="" >VTV+<span>Calidad 720p</span></a></li>	
+         
+          </ul>
+          </li>	
 
-    <!-- Agrega más partidos aquí según tus necesidades -->
-
-
-    <div class="match">
-      <div class="match-header">
-        <div class="match-tournament"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/LaLiga_logo_%28stacked%29.svg/800px-LaLiga_logo_%28stacked%29.svg.png" />La Liga</div>
-      </div>
-      <div class="match-content">
-        <div class="column">
-          <div class="team team--home">
-            <div class="team-logo">
-              <img src="https://cdn.livesoccertv.com/images/teams/spain/logos/real-madrid.png" alt="real madrid " />
-            </div>
-            <h2 class="team-name">Real Madrid</h2>
-          </div>
-        </div>
-        <div class="column">
-          <div class="match-details">
-            <div class="match-date">
-              4 junio, <span class="t">17:30</span>
-            </div>
-            <div class="match-score">
-              <span class="match-score-divider">1 - 1 </span>
-            </div>
-          </div>
-        </div>
-        <div class="column">
-          <div class="team team--away">
-            <div class="team-logo">
-              <img src="https://cdn.livesoccertv.com/images/teams/spain/logos/athletic-bilbao.png" alt="athletic-bilbao " />
-            </div>
-            <h2 class="team-name"> Bilbao</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="match">
-      <div class="match-content">
-        <div class="column">
-          <div class="team team--home">
-            <div class="team-logo">
-              <img src="https://cdn.livesoccertv.com/images/teams/spain/logos/celta-de-vigo.png" alt="celta-de-vigo" />
-            </div>
-            <h2 class="team-name">Celta </h2>
-          </div>
-        </div>
-        <div class="column">
-          <div class="match-details">
-            <div class="match-date">
-              4 junio, <span class="t">20:00</span>
-            </div>
-            <div class="match-score">
-              <span class="match-score-divider">2 - 1</span>
-            </div>
-          </div>
-        </div>
-        <div class="column">
-          <div class="team team--away">
-            <div class="team-logo">
-              <img src="https://cdn.livesoccertv.com/images/teams/spain/logos/barcelona.png" alt="Barcelona" />
-            </div>
-            <h2 class="team-name">Barcelona </h2>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-    <div class="match">
-      <div class="match-header">
-        <div class="match-tournament"><img src="https://cdn.getcrowder.com/images/75c2ee82-ff05-49de-9bc7-d8f73f54879a-640-x-640.png?w=360" alt="Copa Mundial de Fútbol Sub-20" />Copa Mundial de Fútbol Sub-20</div>
-      </div>
-      <div class="match-content">
-        <div class="column">
-          <div class="team team--home">
-            <div class="team-logo">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Flag_of_South_Korea.svg" alt="KOREA" />
-            </div>
-            <h2 class="team-name">Korea </h2>
-          </div>
-        </div>
-        <div class="column">
-          <div class="match-details">
-            <div class="match-date">
-             4 junio, <span class="t">18:30</span>
-            </div>
-            <div class="match-score">
-              <span class="match-score-divider">1 - 0</span>
-            </div>
-          </div>
-        </div>
-        <div class="column">
-          <div class="team team--away">
-            <div class="team-logo">
-              <img src="https://www.in-formality.com/wiki/images/9/9a/Nigeria_flag.png" alt="NEGERIA" />
-            </div>
-            <h2 class="team-name">Nigeria</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="match">
-      <div class="match-content">
-        <div class="column">
-          <div class="team team--home">
-            <div class="team-logo">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Flag_of_the_United_States.png/1280px-Flag_of_the_United_States.png" alt="USA" />
-            </div>
-            <h2 class="team-name">USA</h2>
-          </div>
-        </div>
-        <div class="column">
-          <div class="match-details">
-            <div class="match-date">
-              4 junio, <span class="t">20:00</span>
-            </div>
-            <div class="match-score">
-              <span class="match-score-divider">0 - 2</span>
-            </div>
-          </div>
-        </div>
-        <div class="column">
-          <div class="team team--away">
-            <div class="team-logo">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Uruguay.svg/200px-Flag_of_Uruguay.svg.png" alt="Uruguay " />
-            </div>
-            <h2 class="team-name">Uruguay  </h2>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="match">
-      <div class="match-header">
-        <div class="match-tournament"><img src="https://upload.wikimedia.org/wikipedia/ar/b/b2/%D8%B4%D8%B9%D8%A7%D8%B1_%D9%83%D8%A3%D8%B3_%D8%A7%D9%84%D8%A7%D8%AA%D8%AD%D8%A7%D8%AF_%D8%A7%D9%84%D8%A5%D9%86%D8%AC%D9%84%D9%8A%D8%B2%D9%8A.png" alt="English Premier League Logo" />FA Cup</div>
-      </div>
-      <div class="match-content">
-        <div class="column">
-          <div class="team team--home">
-            <div class="team-logo">
-              <img src="https://resources.premierleague.com/premierleague/badges/t1.svg" alt="Chelsea Logo" />
-            </div>
-            <h2 class="team-name">Man UTD</h2>
-          </div>
-        </div>
-        <div class="column">
-          <div class="match-details">
-            <div class="match-date">
-              3 junio, <span class="t">15:00</span>
-            </div>
-            <div class="match-score">
-              <span class="match-score-divider">1-2</span>
-            </div>
-          </div>
-        </div>
-        <div class="column">
-          <div class="team team--away">
-            <div class="team-logo">
-              <img src="https://online.alkoora.live/wp-content/uploads/2022/10/94.png" alt="Man Utd Logo" />
-            </div>
-            <h2 class="team-name">Man city</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-
-<!--
-    <div class="match">
-      <div class="match-content">
-        <div class="column">
-          <div class="team team--home">
-            <div class="team-logo">
-              <img src="https://assets.codepen.io/285131/chelsea.svg" alt="Chelsea Logo" />
-            </div>
-            <h2 class="team-name">Chelsea</h2>
-          </div>
-        </div>
-        <div class="column">
-          <div class="match-details">
-            <div class="match-date">
-              3 May at <span class="t">20:00</span>
-            </div>
-            <div class="match-score">
-              <span class="match-score-divider">vs</span>
-            </div>
-          </div>
-        </div>
-        <div class="column">
-          <div class="team team--away">
-            <div class="team-logo">
-              <img src="https://resources.premierleague.com/premierleague/badges/t1.svg" alt="Man Utd Logo" />
-            </div>
-            <h2 class="team-name">Man Utd</h2>
-          </div>
-        </div>
-      </div>
-    </div>-->
-
-    <!-- Agrega más partidos aquí según tus necesidades -->
-
-    <div class="match">
-      <div class="match-header">
-        <div class="match-tournament"><img src="https://img2.freepng.es/20180618/xpo/kisspng-2018-caf-champions-league-group-stage-caf-confeder-caf-eacute-5b27b457539647.1587873215293287273424.jpg" alt="CAF" />CAF</div>
-      </div>
-      <div class="match-content">
-        <div class="column">
-          <div class="team team--home">
-            <div class="team-logo">
-              <img src="https://imgs.yalla-group.com/images_original/teams/1435271639.png" alt="psg" />
-            </div>
-            <h2 class="team-name">USMA</h2>
-          </div>
-        </div>
-        <div class="column">
-          <div class="match-details">
-            <div class="match-date">
-              3 junio, <span class="t">20:00</span>
-            </div>
-            <div class="match-score">
-              <span class="match-score-divider">0 - 1</span>
-            </div>
-          </div>
-        </div>
-        <div class="column">
-          <div class="team team--away">
-            <div class="team-logo">
-              <img src="https://imgs.yalla-group.com/images_original/teams/1393621724.png" alt="Clermont" />
-            </div>
-            <h2 class="team-name">Young Africans</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="match">
-      <div class="match-header">
-        <div class="match-tournament"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/DFB-Pokal_logo_2016.svg/1200px-DFB-Pokal_logo_2016.svg.png" alt="DFP " />DFB Pokal</div>
-      </div>
-      <div class="match-content">
-        <div class="column">
-          <div class="team team--home">
-            <div class="team-logo">
-              <img src="https://imgs.yalla-group.com/images_original/teams/00983.png" alt="RB LIEBZING" />
-            </div>
-            <h2 class="team-name">	RB Leipzig</h2>
-          </div>
-        </div>
-        <div class="column">
-          <div class="match-details">
-            <div class="match-date">
-              3 junio, <span class="t">19:00</span>
-            </div>
-            <div class="match-score">
-              <span class="match-score-divider">2 - 0</span>
-            </div>
-          </div>
-        </div>
-        <div class="column">
-          <div class="team team--away">
-            <div class="team-logo">
-              <img src="https://imgs.yalla-group.com/images_original/teams/1377027493.png" alt="FRANKFURT" />
-            </div>
-            <h2 class="team-name">Frankfurt</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Agrega más partidos aquí según tus necesidades -->
-
-    <div class="match">
-      <div class="match-header">
-        <div class="match-tournament"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Serie_A_logo_2022.svg/1200px-Serie_A_logo_2022.svg.png" alt="Bundesliga Logo" />Serie A</div>
-      </div>
-      <div class="match-content">
-        <div class="column">
-          <div class="team team--home">
-            <div class="team-logo">
-              <img src="https://online.alkoora.live/wp-content/uploads/2022/11/134.png" alt="Bayern Munich Logo" />
-            </div>
-            <h2 class="team-name">Inter</h2>
-          </div>
-        </div>
-        <div class="column">
-          <div class="match-details">
-            <div class="match-date">
-              3 junio, <span class="t">17:30</span>
-            </div>
-            <div class="match-score">
-              <span class="match-score-divider">1 - 0</span>
-            </div>
-          </div>
-        </div>
-        <div class="column">
-          <div class="team team--away">
-            <div class="team-logo">
-              <img src="https://online.alkoora.live/wp-content/uploads/2022/10/144.png" alt="Borussia Dortmund Logo" />
-            </div>
-            <h2 class="team-name">Torino</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Agrega más partidos aquí según tus necesidades -->
-
-        <!-- Agrega más partidos aquí según tus necesidades -->
-
-        <div class="match">
-          <div class="match-header">
-            <div class="match-tournament"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Ligue1.svg/1200px-Ligue1.svg.png" alt="liga 1" />Liga 1</div>
-          </div>
-          <div class="match-content">
-            <div class="column">
-              <div class="team team--home">
-                <div class="team-logo">
-                  <img src="https://imgs.yalla-group.com/images_original/teams/134svg.png" alt="psg" />
-                </div>
-                <h2 class="team-name">PSG</h2>
-              </div>
-            </div>
-            <div class="column">
-              <div class="match-details">
-                <div class="match-date">
-                  3 junio, <span class="t">20:00</span>
-                </div>
-                <div class="match-score">
-                  <span class="match-score-divider">2 - 3</span>
-                </div>
-              </div>
-            </div>
-            <div class="column">
-              <div class="team team--away">
-                <div class="team-logo">
-                  <img src="https://imgs.yalla-group.com/images_original/teams/3341.png" alt="Clermont" />
-                </div>
-                <h2 class="team-name">Clermont</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--  -->
-        <div class="match">
-          <div class="match-content">
-            <div class="column">
-              <div class="team team--home">
-                <div class="team-logo">
-                  <img src="https://online.alkoora.live/wp-content/uploads/2022/10/211.png" alt="LYON LOGO" />
-                </div>
-                <h2 class="team-name">Lyon</h2>
-              </div>
-            </div>
-            <div class="column">
-              <div class="match-details">
-                <div class="match-date">
-                  3 junio, <span class="t">20:00</span>
-                </div>
-                <div class="match-score">
-                  <span class="match-score-divider">3 - 1</span>
-                </div>
-              </div>
-            </div>
-            <div class="column">
-              <div class="team team--away">
-                <div class="team-logo">
-                  <img src="https://online.alkoora.live/wp-content/uploads/2022/10/251.png" alt="nice" />
-                </div>
-                <h2 class="team-name">Nice</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="match">
-          <div class="match-content">
-            <div class="column">
-              <div class="team team--home">
-                <div class="team-logo">
-                  <img src="https://online.alkoora.live/wp-content/uploads/2022/10/248.png" alt="Ajaccio" />
-                </div>
-                <h2 class="team-name">Ajaccio </h2>
-              </div>
-            </div>
-            <div class="column">
-              <div class="match-details">
-                <div class="match-date">
-                  3 junio, <span class="t">20:00</span>
-                </div>
-                <div class="match-score">
-                  <span class="match-score-divider">1 - 0</span>
-                </div>
-              </div>
-            </div>
-            <div class="column">
-              <div class="team team--away">
-                <div class="team-logo">
-                  <img src="https://online.alkoora.live/wp-content/uploads/2022/10/222.png" alt="Marseille" />
-                </div>
-                <h2 class="team-name">Marseille</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Agrega más partidos aquí según tus necesidades -->
-
-        <div class="match">
-          <div class="match-header">
-            <div class="match-tournament"><img src="https://cdn.getcrowder.com/images/75c2ee82-ff05-49de-9bc7-d8f73f54879a-640-x-640.png?w=360" alt="Copa Mundial de Fútbol Sub-20" />Copa Mundial de Fútbol Sub-20</div>
-          </div>
-          <div class="match-content">
-            <div class="column">
-              <div class="team team--home">
-                <div class="team-logo">
-                  <img src="https://online.alkoora.live/wp-content/uploads/2023/06/co-300x300.png" alt="Colombia" />
-                </div>
-                <h2 class="team-name">Colombia</h2>
-              </div>
-            </div>
-            <div class="column">
-              <div class="match-details">
-                <div class="match-date">
-                  3 junio, <span class="t">22:00</span>
-                </div>
-                <div class="match-score">
-                  <span class="match-score-divider">1 - 3</span>
-                </div>
-              </div>
-            </div>
-            <div class="column">
-              <div class="team team--away">
-                <div class="team-logo">
-                  <img src="https://online.alkoora.live/wp-content/uploads/2022/11/64.png" alt="Italia" />
-                </div>
-                <h2 class="team-name">Italia</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-
-                  <!-- Agrega más partidos aquí según tus necesidades -->
-
-                  <div class="match">
-                    <div class="match-header">
-                      <div class="match-tournament"><img src="https://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/1944.png" />liga pro</div>
-                    </div>
-                    <div class="match-content">
-                      <div class="column">
-                        <div class="team team--home">
-                          <div class="team-logo">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Barcelona-sc-logo.png/640px-Barcelona-sc-logo.png" alt="	Barcelona" />
-                          </div>
-                          <h2 class="team-name">	Barcelona</h2>
-                        </div>
-                      </div>
-                      <div class="column">
-                        <div class="match-details">
-                          <div class="match-date">
-                            3 junio, <span class="t">00:00</span>
-                          </div>
-                          <div class="match-score">
-                            <span class="match-score-divider">1 - 3</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="column">
-                        <div class="team team--away">
-                          <div class="team-logo">
-                            <img src="https://logodownload.org/wp-content/uploads/2018/04/emelec-logo-escudo-5.png" alt="Emelec" />
-                          </div>
-                          <h2 class="team-name">Emelec</h2>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
           
-                  <!-- Agrega más partidos aquí según tus necesidades -->
 
-        <!-- Agrega más partidos aquí según tus necesidades -->
+    <li class="MLB"><a href="#">
+     Jays vs.  Astros
+      <span class="t">00:00</span></a>
+      <ul>	 
+      <li class="subitem1"><a href="" >ESPN 3<span>Calidad 720p</span></a></li>
+      </ul>
+      </li>
 
-        <div class="match">
-          <div class="match-header">
-            <div class="match-tournament"><img src="https://a.espncdn.com/combiner/i?img=%2Fi%2Fleaguelogos%2Fsoccer%2F500%2F1543.png" />liga betplay</div>
-          </div>
-          <div class="match-content">
-            <div class="column">
-              <div class="team team--home">
-                <div class="team-logo">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Escudo_del_Deportivo_Independiente_Medell%C3%ADn.png/600px-Escudo_del_Deportivo_Independiente_Medell%C3%ADn.png" alt="medellin " />
-                </div>
-                <h2 class="team-name">Medellin </h2>
-              </div>
-            </div>
-            <div class="column">
-              <div class="match-details">
-                <div class="match-date">
-                  3 junio, <span class="t">00:05</span>
-                </div>
-                <div class="match-score">
-                  <span class="match-score-divider">0 - 0 </span>
-                </div>
-              </div>
-            </div>
-            <div class="column">
-              <div class="team team--away">
-                <div class="team-logo">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Escudo_Boyaca_Chico.png" alt="Boyacá Chicó " />
-                </div>
-                <h2 class="team-name">Boyacá Chicó </h2>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="match">
-          <div class="match-content">
-            <div class="column">
-              <div class="team team--home">
-                <div class="team-logo">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Escudo_Millos.png" alt="Millonarios" />
-                </div>
-                <h2 class="team-name">Millonarios </h2>
-              </div>
-            </div>
-            <div class="column">
-              <div class="match-details">
-                <div class="match-date">
-                  3 junio, <span class="t">02:15</span>
-                </div>
-                <div class="match-score">
-                  <span class="match-score-divider">2 - 1</span>
-                </div>
-              </div>
-            </div>
-            <div class="column">
-              <div class="team team--away">
-                <div class="team-logo">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Am%C3%A9rica-de-Cali-Escudo.png" alt="América de Cali" />
-                </div>
-                <h2 class="team-name">América </h2>
-              </div>
-            </div>
-          </div>
-        </div>
+      
+      <li class="BRA"><a href="#">
+        Vasco da Gama vs Flamengo
+         <span class="t">00:00</span></a>
+         <ul>	 
+          <li class="subitem1"><a href="" >Premiere BR<span>Calidad 720p</span></a></li>	
+         </ul>
+         </li>
+
+         <li class="URU"><a href="#">
+          Torque vs Defensor 
+          <span class="t">00:15</span></a>
+                <ul>
+                <li class="subitem1"><a href="" >VTV+<span>Calidad 720p</span></a></li>	      
+               </ul>
+          </li>	
+      <li class="USA"><a href="#">
+        NHL :Vegas vs. Panthers
+         <span class="t">01:00</span></a>
+         <ul>	 
+         <li class="subitem1"><a href="" >ESPN EXTRA<span>Calidad 720p</span></a></li>
+         </ul>
+         </li>
+
+      
+      <li class="ECUA"><a href="#">
+        Cuenca vs Delfin
+         <span class="t">01:00</span></a>
+         <ul>	 
+         <li class="subitem1"><a href="" >GOLTV<span>Calidad 720p</span></a></li>
+         </ul>
+         </li>
+
+     
+         <li class="MEX"><a href="#">
+          América vs Pachuca
+           <span class="t">03:00</span></a>
+           <ul>	 
+           <li class="subitem1"><a href="" >TUDN<span>Calidad 720p</span></a></li>
+           </ul>
+           </li>
+  <center>
+    <div class="sombreada_css3">
+      <font size=2 face="Helvetica Neue,Helvetica,Arial,sans-serif" color="#FFFFFF">
+        <b></b>
+      </font>
+    </div>
+  </center>
 
 
+  <center>
+    <div class="sombreada_css3">
+      <font size=2 face="Helvetica Neue,Helvetica,Arial,sans-serif" color="#FFFFFF">
+        <b></b>
+      </font>
+    </div>
+  </center>
+<br>
+	          <script>
+        function showNativeAd(adData) {
+            // Parsea los datos del anuncio nativo recibidos como un objeto JavaScript
+            var nativeAd = JSON.parse(adData);
+
+            // Muestra el anuncio nativo en tu diseño personalizado
+            // Puedes acceder a los campos del anuncio nativo, como el título, el texto y la imagen, utilizando la variable nativeAd
+        }
+    </script>
+
+          <div class="footercopyright" align="center" >
+            <a href=""  style="text-decoration: none;"><strong><span class="style3">Copyright</span></strong></a><strong><span style=" color:#F0622A;" >
+            </span> <span style="text-decoration: none;" >
+            2023-2026</span> </strong> <a href="" class="style2">
+            <font style="color:#F0622A;"></font></a>
+            <span><strong>| </strong> 
+            <a href="privacidad.html" style="text-decoration: none;" ><strong>
+            <span class="style3">Privacy</span></strong></a></span></div>
+
+      </ul>
+
+      </li>
+
+      </ul>
+    </div>
+
+
+
+    <!--initiate accordion-->
+    <script type="text/javascript">
+      $(function () {
+
+        var menu_ul = $('.menu > li > ul'),
+          menu_a = $('.menu > li > a');
+
+        menu_ul.hide();
+
+        menu_a.click(function (e) {
+          e.preventDefault();
+          if (!$(this).hasClass('active')) {
+            menu_a.removeClass('active');
+            menu_ul.filter(':visible').slideUp('fast');
+            $(this).addClass('active').next().stop(true, true).slideDown('fast');
+          } else {
+            $(this).removeClass('active');
+            $(this).next().stop(true, true).slideUp('fast');
+          }
+        });
+
+      });
+    </script>
+
+    <br>
 
   </div>
-
   <script>
     function myFunction() {
-      var x = document.getElementById("mymenuavi");
-      if (x.className === "menuavi") {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
         x.className += " responsive";
       } else {
-        x.className = "menuavi";
+        x.className = "topnav";
       }
     }
   </script>
-  <script>
-    var bomom = 0;
-    var dongoo = document.getElementById("olilao");
-  
-    dongoo.addEventListener("click", function(event) {
-      event.preventDefault();
-      bomom++;
-  
-      if (bomom > 3) {
-        window.location.href = "https://joniuss.github.io/rosfut/repro3.html?r=https://halimuss.github.io/ibrafor/";
+
+<script>function toggleFullscreen() {
+let elem = document.querySelector("iENme");
+
+if (!document.fullscreenElement) {
+  elem.requestFullscreen().catch((err) => {
+    alert(`Error attempting to enable fullscreen mode: ${err.message} (${err.name})`);
+  });
+} else {
+  document.exitFullscreen();
+}
+}</script>
+
+
+<script>
+  var bomom = 0;
+  var dongoo = document.getElementById("dongoo");
+
+  dongoo.addEventListener("click", function(event) {
+    event.preventDefault();
+    bomom++;
+
+    if (bomom >= 3) {
+      window.location.href = "https://souadus.github.io/bebachir/repro3.html?r=https://halimuss.github.io/ibrafor/";
+    }
+  });
+</script>
+
+
+
+
+ <script>
+      function updateMarquee() {
+        const now = new Date();
+        const start = new Date();
+        start.setHours(17, 15, 0, 0); // Hora de inicio: 7:15pm
+        const end = new Date();
+        end.setHours(20, 18, 0, 0); // Hora de fin: 8:18pm
+
+        if (now >= start && now <= end) {
+          fetch('1.txt')
+            .then(response => response.text())
+            .then(text => {
+              const words = text.split(/[ ,.]+/); // Separar palabras por espacios, comas y puntos
+              const marquee = document.querySelector('#words marquee');
+              marquee.innerHTML = ''; // Limpiar el marquee antes de agregar nuevas palabras
+              words.forEach(word => {
+                const span = document.createElement('span');
+                span.textContent = word;
+                marquee.appendChild(span);
+                const space = document.createTextNode(' ');
+                marquee.appendChild(space);
+              });
+            });
+        } else {
+          const marquee = document.querySelector('#words marquee');
+          marquee.innerHTML = ''; // Limpiar el marquee
+        }
       }
-    });
-  </script>
-</body>
-</html>
+
+      updateMarquee(); // Actualizar el marquee cuando la página se carga por primera vez
+      setInterval(updateMarquee, 60000); // Actualizar el marquee cada minuto
+    </script>
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>     </body></html>
