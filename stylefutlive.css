@@ -43,7 +43,7 @@
             .menu>li>a:before{content:'';
               background-image:url(https://megadeportes.xyz/spriteupdate.png);
               background-repeat:no-repeat;
-              font-size:36px;height:1em;width:1em;position:absolute;left:55;top:50%;margin:-.5em 0 0}
+              font-size:36px;height:1em;width:1em;position:absolute;left:65;top:50%;margin:-.5em 0 0}
               @media only screen and (max-width:600px){
                 .menu>li>a:before{left:30}}
                 .COL>a:before{background-position:0 0}
