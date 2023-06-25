@@ -43,7 +43,7 @@
             .menu>li>a:before{content:'';
               background-image:url(https://megadeportes.xyz/spriteupdate.png);
               background-repeat:no-repeat;
-              font-size:36px;height:1em;width:1em;position:absolute;left:65;top:50%;margin:-.5em 0 0}
+              font-size:36px;height:1em;width:1em;position:absolute;left:40;top:50%;margin:-.5em 0 0}
               @media only screen and (max-width:600px){
                 .menu>li>a:before{left:30}}
                 .COL>a:before{background-position:0 0}
@@ -118,6 +118,6 @@
                       padding:.4em .7em;margin:-.9em 0 0;color:#000;text-indent:0;text-align:center;
                       -webkit-border-radius:.769em;-moz-border-radius:769em;border-radius:769em;
                       text-shadow:0 0 0 rgba(255,255,255,.01))}
-                      div.sombreada_css3{background-color:#3069db;width:100%px;padding:12px;
+                      div.sombreada_css3{background-color:#8baf1c;width:100%px;padding:12px;
                         color:#039;box-shadow:0 1px 1px #333;-webkit-box-shadow:0 1px 1px #333;
                         -moz-box-shadow:0 1px 1px #333}}
