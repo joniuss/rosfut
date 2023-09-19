@@ -20,7 +20,7 @@ bottom,from(rgb(128,128,128)),to(rgb(128,128,128)));background-image:-webkit-lin
 solid #404040;-webkit-box-shadow:inset 0 1px 0 0 #404040;-moz-box-shadow:inset 0
 1px 0 0 #404040;box-shadow:inset 0 1px 0 0
 #404040}.menu>li>a.active{border-bottom:0 solid
-#404040}.menu>li>a:before{content:'';background-image:url(agenda2.png);background-repeat:no-repeat;font-size:36px;height:1em;width:1em;position:absolute;left:55;top:50%;margin:-.5em
+#404040}.menu>li>a:before{content:'';background-image:url(agenda2.png);background-repeat:no-repeat;font-size:36px;height:1em;width:1em;position:absolute;left:70px;top:50%;margin:-.5em
 0 0}@media only screen and
 (max-width:600px){.menu>li>a:before{left:52}}.COL>a:before{background-position:0
 0}.MEX>a:before{background-position:-38px 0}.ES>a:before{background-position:0
